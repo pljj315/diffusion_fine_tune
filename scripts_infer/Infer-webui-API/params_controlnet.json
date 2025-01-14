@@ -1,0 +1,37 @@
+{ 
+  
+  "seed": 0,
+  "height":1024,
+  "width":1024,
+  "target_h":1024,
+  "target_w":1024,
+  "retry":1,
+  "cfg_scale": 7.5,
+  "steps": 30,
+  "batch_size":1,
+  "model":"sd_xl_base_1.0",
+
+  "init_images": "",
+  "prompt": "define in the code.",
+  "negative_prompt": "(blurry:1.3), wrong structure, watermark, more color, more human, bad face, strange sky, worst quality, low quality, (woman:0.5), signature, username, text, abstract, lowres, bad anatomy, wrong ratio, low quality,lowres,text,error,extra digit,cropped,worst quality,jpeg artifacts,signature,watermark,username,blurry.",
+
+  "output_path": "Infer-API/infer_output/aa",
+  "sampler_index":"Euler a",
+
+  "alwayson_scripts": {
+    "controlnet": {
+      "args": [
+        {
+          "model":  "outpainting_768ft02_5200 [44542034]",
+          "pixel_perfect":  false,
+          "module":  "inpaint_only_invert_mask_negative",
+          "resize_mode":  0,
+          "processor_res":  1024,
+          "control_mode":  0,
+          "weight":  1
+        }
+      ]
+    }
+  }
+}
+  

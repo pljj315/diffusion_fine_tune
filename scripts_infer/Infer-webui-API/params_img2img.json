@@ -1,0 +1,32 @@
+{
+    "steps":30,
+    
+    "init_images": "",
+    
+    "prompt":"A cartoon image of a boy and girl sitting under a moon, with the girl holding a heart. The boy is wearing a rabbit costume and the girl is wearing a bunny costume. <lora:3DPixel2_SDXLIP_v0:1>",
+    "negative_prompt":"",
+    "seed":0,
+    "cfg_scale":7.0,
+    "batch_size":1,
+    "model":"sd_xl_base_1.0",
+    
+    "alwayson_scripts":{
+        "controlnet":{
+            "args":[
+                {
+                  "model":  "outpainting_768ft02_5500 [44542034]",
+                  "pixel_perfect":  false,
+                  "module":  "inpaint_only_invert_mask_negative",
+                  "resize_mode":  0,
+                  "processor_res":  1024,
+                  "control_mode":  0,
+                  "weight":  1,
+                  "inpaint_product_prompt":"the product"
+                }
+            ]
+        }
+    },
+    "sampler_index":"Euler a",
+    "output_path":"*.png"
+}
+
